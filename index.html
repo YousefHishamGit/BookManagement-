@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="imags/icon.png">
+    <!------BootStarp------>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!------Font Awosem---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-----Google Font----->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+    <!------My style------->
+    <link rel="stylesheet" href="css/myStyle.css">
+</head>
+
+<body>
+    <section class=" container-md  m-auto  mt-2 ">
+        <div class="text-center m-5">
+            <h1 class="position-relative">Bookmarker</h1>
+        </div>
+
+        <div class="inputBox">
+            <h3 class="text-center m-4"> <span><i class="fa-solid fa-bookmark"></i></span> Bookmark your favorite sites <span><i class="fa-solid fa-bookmark"></i></span></h3>
+            <div class="InputManager d-flex flex-column  justify-content-around mb-5">
+                <label for="floatingInput"> <span><i class="me-2 fa-solid fa-book-bookmark"></i></span>Site Name</label>
+                <div class="form-floating mb-4 mt-2">
+                    <input oninput="isValidName()" id="inputName" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Bookmark Name</label>
+                </div>
+                <label for="floatingInputURL"> <span><i class="me-2 fa-solid fa-link"></i></span>Site URL</label>
+                <div class="form-floating mt-2">
+                    <input oninput="isValidURL()" id="inputURL" type="text" class="form-control" id="floatingInputURL" placeholder="name@example.com">
+                    <label for="floatingInputURL">Website URL</label>
+                </div>
+                <div class="text-center m-4">
+                    <button onclick="addBook()" class="btn btn-danger fw-bold px-1" type="submit"> Submit </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="output mt-4 mb-3">
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr class="border-1 border-light-subtle">
+                        <td>
+                            <h5 class="fs-6 fw-bold">Index</h5>
+                        </td>
+                        <td>
+                            <h5 class="fs-6 fw-bold">WebSite Name</h5>
+                        </td>
+                        <td>
+                            <h5 class="fs-6 fw-bold">Visit</h5>
+                        </td>
+                        <td>
+                            <h5 class="fs-6 fw-bold">Delete</h5>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="tableBody" class="border-1 border-light-subtle">
+
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+    </section>
+
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="JS/myJS.js"></script>
+</body>
+
+</html>

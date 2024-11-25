@@ -1,0 +1,84 @@
+body {
+    background-color: #F7ECDE;
+}
+
+h1 {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 19%;
+    height: 32%;
+    left: 40%;
+    bottom: 0;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 72%;
+}
+
+h3 {
+    font-family: "Righteous", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-text-fill-color: transparent;
+    /* Makes the gradient apply to the text only */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.inputBox {
+    border-top: black dotted 3px;
+    border-bottom: black dotted 3px;
+}
+
+.form-floating>label {
+    color: rgb(97 97 97 / 50%);
+}
+
+.form-floating>.form-control,
+.form-floating>.form-select {
+    height: calc(3.5rem + -10px);
+}
+
+.inputBox button {
+    width: 15%;
+}
+
+.inputBox .InputManager label {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.btn-check:focus+.btn-danger,
+.btn-danger:focus {
+    box-shadow: 0 0 0 0rem rgba(225, 83, 97, .5);
+    transition: all 0.1s;
+}
+
+.form-floating>label {
+    transition: opacity .3s ease-in-out, transform .5s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+    h1::before {
+        content: "";
+        position: absolute;
+        width: 43%;
+        height: 32%;
+        left: 28%;
+        bottom: 0;
+        background-color: #fec260;
+        transition: height 350ms;
+        z-index: -1;
+    }
+}
